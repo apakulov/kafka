@@ -17,16 +17,15 @@
 package kafka.admin
 
 import kafka.log.Log
-import org.scalatest.junit.JUnit3Suite
 import kafka.zk.ZooKeeperTestHarness
-import junit.framework.Assert._
 import kafka.utils.{ZkUtils, TestUtils}
 import kafka.server.{KafkaServer, KafkaConfig}
 import org.junit.Test
+import org.junit.Assert._
 import java.util.Properties
 import kafka.common.TopicAndPartition
 
-class DeleteTopicTest extends JUnit3Suite with ZooKeeperTestHarness {
+class DeleteTopicTest extends ZooKeeperTestHarness {
 
   @Test
   def testDeleteTopicWithAllAliveReplicas() {

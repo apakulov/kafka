@@ -22,12 +22,12 @@ import kafka.api.ApiVersion
 import kafka.message._
 import org.apache.kafka.common.protocol.SecurityProtocol
 import org.junit.{Assert, Test}
-import org.scalatest.junit.JUnit3Suite
+import org.scalatest.Assertions._
 
 import scala.collection.Map
 import scala.util.Random._
 
-class KafkaConfigConfigDefTest extends JUnit3Suite {
+class KafkaConfigConfigDefTest {
 
   @Test
   def testFromPropsEmpty() {

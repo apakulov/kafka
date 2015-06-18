@@ -19,15 +19,15 @@ package kafka.server
 
 import java.util.Properties
 
-import junit.framework.Assert._
 import kafka.api.{ApiVersion, KAFKA_082}
 import kafka.utils.{TestUtils, CoreUtils}
 import org.apache.kafka.common.config.ConfigException
 import org.apache.kafka.common.protocol.SecurityProtocol
 import org.junit.Test
-import org.scalatest.junit.JUnit3Suite
+import org.junit.Assert._
+import org.scalatest.Assertions._
 
-class KafkaConfigTest extends JUnit3Suite {
+class KafkaConfigTest {
 
   @Test
   def testLogRetentionTimeHoursProvided() {

@@ -18,16 +18,15 @@ package kafka.server
 
 import java.util.Properties
 
-import junit.framework.Assert._
-import org.junit.Test
-import kafka.integration.KafkaServerTestHarness
-import kafka.utils._
-import kafka.common._
-import kafka.log.LogConfig
 import kafka.admin.{AdminOperationException, AdminUtils}
-import org.scalatest.junit.JUnit3Suite
+import kafka.common._
+import kafka.integration.KafkaServerTestHarness
+import kafka.log.LogConfig
+import kafka.utils._
+import org.junit.Assert._
+import org.junit.Test
 
-class DynamicConfigChangeTest extends JUnit3Suite with KafkaServerTestHarness {
+class DynamicConfigChangeTest extends KafkaServerTestHarness {
   def generateConfigs() = List(KafkaConfig.fromProps(TestUtils.createBrokerConfig(0, zkConnect)))
 
   @Test
